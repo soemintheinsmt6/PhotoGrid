@@ -9,7 +9,7 @@ import UIKit
 
 class IndicatorCell: UICollectionViewCell {
     
-    var inidicator : UIActivityIndicatorView = {
+    private var inidicator : UIActivityIndicatorView = {
         let view = UIActivityIndicatorView()
         view.style = .medium
         return view

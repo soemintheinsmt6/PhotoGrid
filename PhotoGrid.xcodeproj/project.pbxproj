@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9219F7CB2C778DA2005FBD75 /* PhotoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9219F7CA2C778DA2005FBD75 /* PhotoListViewController.xib */; };
+		9219F7CC2C778DA2005FBD75 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219F7C92C778DA2005FBD75 /* PhotoListViewController.swift */; };
+		9219F7D02C7791CE005FBD75 /* PhotoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9219F7CF2C7791CE005FBD75 /* PhotoDetailsViewController.xib */; };
+		9219F7D12C7791CE005FBD75 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219F7CE2C7791CE005FBD75 /* PhotoDetailsViewController.swift */; };
 		924315C62C74CD28009D1583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924315C52C74CD28009D1583 /* AppDelegate.swift */; };
 		924315C82C74CD28009D1583 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924315C72C74CD28009D1583 /* SceneDelegate.swift */; };
-		924315CA2C74CD28009D1583 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924315C92C74CD28009D1583 /* PhotoListViewController.swift */; };
 		924315CD2C74CD28009D1583 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 924315CC2C74CD28009D1583 /* Base */; };
 		924315CF2C74CD2B009D1583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924315CE2C74CD2B009D1583 /* Assets.xcassets */; };
 		924315D22C74CD2B009D1583 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 924315D12C74CD2B009D1583 /* Base */; };
@@ -20,7 +23,6 @@
 		924315EE2C74E757009D1583 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924315EB2C74E757009D1583 /* PhotoCell.swift */; };
 		9246B35D2C75056C009571A3 /* IndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9246B35B2C75056B009571A3 /* IndicatorCell.swift */; };
 		9246B35E2C75056C009571A3 /* IndicatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9246B35C2C75056B009571A3 /* IndicatorCell.xib */; };
-		927BA35B2C75A38900B90919 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927BA35A2C75A38900B90919 /* PhotoDetailsViewController.swift */; };
 		927BA35D2C75A4EC00B90919 /* PushRelevantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927BA35C2C75A4EC00B90919 /* PushRelevantViewController.swift */; };
 		92DCEED62C74F4EB00E209BA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCEED52C74F4EB00E209BA /* Extension.swift */; };
 		FE2C86264D3E486838802335 /* Pods_PhotoGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8418DF02DB0E7FEF3082C3EC /* Pods_PhotoGrid.framework */; };
@@ -31,10 +33,13 @@
 		295DFE1A13111C3CCEE3A2D8 /* Pods-PhotoGrid.debug(dev).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGrid.debug(dev).xcconfig"; path = "Target Support Files/Pods-PhotoGrid/Pods-PhotoGrid.debug(dev).xcconfig"; sourceTree = "<group>"; };
 		6AF18CE3F8A30FC380B0A957 /* Pods-PhotoGrid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGrid.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGrid/Pods-PhotoGrid.debug.xcconfig"; sourceTree = "<group>"; };
 		8418DF02DB0E7FEF3082C3EC /* Pods_PhotoGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9219F7C92C778DA2005FBD75 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		9219F7CA2C778DA2005FBD75 /* PhotoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListViewController.xib; sourceTree = "<group>"; };
+		9219F7CE2C7791CE005FBD75 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		9219F7CF2C7791CE005FBD75 /* PhotoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailsViewController.xib; sourceTree = "<group>"; };
 		924315C22C74CD28009D1583 /* PhotoGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924315C52C74CD28009D1583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924315C72C74CD28009D1583 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		924315C92C74CD28009D1583 /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 		924315CC2C74CD28009D1583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		924315CE2C74CD2B009D1583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		924315D12C74CD2B009D1583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +53,6 @@
 		924315EC2C74E757009D1583 /* PhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		9246B35B2C75056B009571A3 /* IndicatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCell.swift; sourceTree = "<group>"; };
 		9246B35C2C75056B009571A3 /* IndicatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorCell.xib; sourceTree = "<group>"; };
-		927BA35A2C75A38900B90919 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		927BA35C2C75A4EC00B90919 /* PushRelevantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushRelevantViewController.swift; sourceTree = "<group>"; };
 		92DCEED52C74F4EB00E209BA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D0A493D43B59DA18F54A77AB /* Pods-PhotoGrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGrid.release.xcconfig"; path = "Target Support Files/Pods-PhotoGrid/Pods-PhotoGrid.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +70,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9219F7CD2C778E7A005FBD75 /* PhotoList */ = {
+			isa = PBXGroup;
+			children = (
+				9219F7C92C778DA2005FBD75 /* PhotoListViewController.swift */,
+				9219F7CA2C778DA2005FBD75 /* PhotoListViewController.xib */,
+			);
+			path = PhotoList;
+			sourceTree = "<group>";
+		};
+		9219F7D22C7791E1005FBD75 /* PhotoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				9219F7CE2C7791CE005FBD75 /* PhotoDetailsViewController.swift */,
+				9219F7CF2C7791CE005FBD75 /* PhotoDetailsViewController.xib */,
+			);
+			path = PhotoDetails;
+			sourceTree = "<group>";
+		};
 		924315B92C74CD28009D1583 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +138,8 @@
 		924315E42C74E669009D1583 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				927BA35A2C75A38900B90919 /* PhotoDetailsViewController.swift */,
-				924315C92C74CD28009D1583 /* PhotoListViewController.swift */,
+				9219F7D22C7791E1005FBD75 /* PhotoDetails */,
+				9219F7CD2C778E7A005FBD75 /* PhotoList */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,10 +277,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				924315ED2C74E757009D1583 /* PhotoCell.xib in Resources */,
+				9219F7CB2C778DA2005FBD75 /* PhotoListViewController.xib in Resources */,
 				9246B35E2C75056C009571A3 /* IndicatorCell.xib in Resources */,
 				924315CF2C74CD2B009D1583 /* Assets.xcassets in Resources */,
 				924315D22C74CD2B009D1583 /* Base in Resources */,
 				924315CD2C74CD28009D1583 /* Base in Resources */,
+				9219F7D02C7791CE005FBD75 /* PhotoDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,12 +338,12 @@
 				924315EE2C74E757009D1583 /* PhotoCell.swift in Sources */,
 				9246B35D2C75056C009571A3 /* IndicatorCell.swift in Sources */,
 				924315E92C74E6DA009D1583 /* PhotoModel.swift in Sources */,
-				924315CA2C74CD28009D1583 /* PhotoListViewController.swift in Sources */,
 				924315DF2C74D342009D1583 /* Environment.swift in Sources */,
+				9219F7D12C7791CE005FBD75 /* PhotoDetailsViewController.swift in Sources */,
 				927BA35D2C75A4EC00B90919 /* PushRelevantViewController.swift in Sources */,
 				924315C62C74CD28009D1583 /* AppDelegate.swift in Sources */,
-				927BA35B2C75A38900B90919 /* PhotoDetailsViewController.swift in Sources */,
 				924315E62C74E695009D1583 /* PhotoListViewModel.swift in Sources */,
+				9219F7CC2C778DA2005FBD75 /* PhotoListViewController.swift in Sources */,
 				924315C82C74CD28009D1583 /* SceneDelegate.swift in Sources */,
 				92DCEED62C74F4EB00E209BA /* Extension.swift in Sources */,
 			);

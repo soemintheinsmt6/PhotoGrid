@@ -10,9 +10,8 @@ import UIKit
 extension UIViewController {
     
     func pushPhotoDetailsViewController(image: String) {
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "photoDetailsVC") as? PhotoDetailsViewController {
-            vc.downloadURL = image
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        let vc = PhotoDetailsViewController(nibName: "PhotoDetailsViewController", bundle: nil) as PhotoDetailsViewController
+        vc.downloadURL = image
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -14,7 +14,7 @@ class PhotoListViewModel {
     var onUpdate: (() -> Void)?
     
     var currentPage = 1
-    var isFetching = false
+    private var isFetching = false
     
     func fetchPhotos() {
         guard !isFetching else { return }
