@@ -9,6 +9,8 @@ target 'PhotoGrid' do
   pod 'Alamofire', '~> 5.4.4'
   pod 'SDWebImage', '~> 5.0'
   pod 'SkeletonView'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   
   
   post_install do |installer|

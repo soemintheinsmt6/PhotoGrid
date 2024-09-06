@@ -5,10 +5,10 @@
 //  Created by Soemin Thein on 20/08/2024.
 //
 
-import Alamofire
 import Foundation
 
 class PhotoListViewModel {
+    private let photoService: PhotoServiceProtocol
     
     var photos: [PhotoModel] = []
     var onUpdate: (() -> Void)?
@@ -16,15 +16,18 @@ class PhotoListViewModel {
     var currentPage = 1
     private var isFetching = false
     
+    init(photoService: PhotoServiceProtocol) {
+        self.photoService = photoService
+    }
+    
     func fetchPhotos() {
         guard !isFetching else { return }
-        
         isFetching = true
         
-        let url = "\(Environment.baseURL)?page=\(currentPage)&limit=21"
-        AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseDecodable(of: [PhotoModel].self) { [weak self] response in
+        photoService.fetchPhotos(page: currentPage) { [weak self] result in
             DispatchQueue.global(qos: .background).async {
-                switch response.result {
+                
+                switch result {
                     
                 case .success(let photoList):
                     self?.photos.append(contentsOf: photoList)

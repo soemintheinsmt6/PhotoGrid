@@ -10,13 +10,16 @@ import SkeletonView
 
 class PhotoListViewController: UIViewController {
     
-    let viewModel = PhotoListViewModel()
+    var viewModel: PhotoListViewModel!
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     @IBOutlet weak var photoCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let photoService = PhotoService()
+        viewModel = PhotoListViewModel(photoService: photoService)
         
         setupView()
         bindViewModel()
