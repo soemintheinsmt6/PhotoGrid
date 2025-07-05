@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1540"
+   LastUpgradeVersion = "1630"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -35,9 +35,20 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "923769E32C8B325900F6F89F"
+               BlueprintIdentifier = "927354D12E18E954005DB452"
                BuildableName = "PhotoGridTests.xctest"
                BlueprintName = "PhotoGridTests"
+               ReferencedContainer = "container:PhotoGrid.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "927354E02E18E97E005DB452"
+               BuildableName = "PhotoGridUITests.xctest"
+               BlueprintName = "PhotoGridUITests"
                ReferencedContainer = "container:PhotoGrid.xcodeproj">
             </BuildableReference>
          </TestableReference>
