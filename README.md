@@ -1,15 +1,90 @@
-# 💫 About Me:
-🔭 I’m currently working on Mobile app development projects using Swift, UIKit, SwiftUI, and Flutter and building scalable and efficient mobile applications.<br>👯 I’m looking to collaborate on Open-source projects related to mobile development.<br>⚡ Fun fact: Besides coding, I'm also a good footballer who enjoys playing competitively in my free time!
+## PhotoGrid (iOS)
+
+A lightweight iOS app that displays a grid of photos with a details screen. Built with UIKit and MVVM, featuring a clean separation of concerns, lightweight networking, and unit/UI tests.
+
+### Features
+- **Photo list**: Paginated grid with placeholder images and loading indicators
+- **Photo details**: Fullscreen viewer with metadata
+- **MVVM**: `PhotoListViewModel` powers the list UI
+- **Networking**: `PhotoService` for API requests and parsing into `PhotoModel`
+- **Environments**: `Dev.xcconfig` and `Prod.xcconfig` for build-time configuration
+- **Tests**: Unit tests (`PhotoGridTests`) and UI tests (`PhotoGridUITests`)
+
+### Requirements
+- **Xcode**: 15+ (recommended)
+- **iOS Deployment Target**: iOS 15+
+- **Swift**: 5.9+
+
+### Getting Started
+1. Clone the repository
+2. Open `PhotoGrid.xcodeproj` in Xcode
+3. Select a scheme:
+   - `PhotoGrid` (Production)
+   - `PhotoGrid(Dev)` (Development)
+4. Build and run on Simulator or a device
+
+### Project Structure
+- `PhotoGrid/`
+  - `AppDelegate.swift`, `SceneDelegate.swift`
+  - `Environment/`
+    - `Environment.swift`, `Dev.xcconfig`, `Prod.xcconfig`
+  - `Model/`
+    - `PhotoModel.swift`
+  - `Networking/`
+    - `PhotoService.swift`
+  - `View/`
+    - `PhotoList/` (`PhotoListViewController`, `.xib`)
+    - `PhotoDetails/` (`PhotoDetailsViewController`, `.xib`)
+  - `ViewModel/`
+    - `PhotoListViewModel.swift`
+  - `Cells/`
+    - `PhotoCell/`, `IndicatorCell/`
+  - `Utils/`
+    - `Extensions/` (`UIImage-Extension.swift`, `UIImageView-Extension.swift`, `UIViewController-Extension.swift`)
+  - `Assets.xcassets/`, `Base.lproj/`, `Info.plist`
+
+### Environments & Configuration
+This project uses build configurations via `.xcconfig` files located in `PhotoGrid/Environment/`:
+- `Dev.xcconfig` for development
+- `Prod.xcconfig` for production
+
+Provide environment values (e.g., API base URL) in these files and read them via `Environment.swift` at runtime.
+
+Example keys (add as needed in the `.xcconfig` files):
+```
+API_BASE_URL = https://example.com/api
+IMAGE_CDN_URL = https://images.example.com
+```
+
+Access them in code through `Environment` helpers.
+
+### Running Tests
+- Unit Tests: `PhotoGridTests`
+- UI Tests: `PhotoGridUITests`
+
+From Xcode:
+- Select the `PhotoGrid` workspace, press Command+U to run all tests
+
+From CLI (optional):
+```bash
+xcodebuild -project PhotoGrid.xcodeproj -scheme "PhotoGrid" -destination 'platform=iOS Simulator,name=iPhone 15' test
+```
+
+### Architecture Notes
+- **MVVM**: View controllers are kept lean; view models contain transformation and data-loading logic
+- **Networking**: `PhotoService` abstracts request creation and decoding into strongly-typed `PhotoModel`
+- **UI**: NIB-backed cells (`PhotoCell`, `IndicatorCell`) and view controllers with corresponding `.xib` files
+- **Extensions**: UIKit helpers in `Utils/Extensions` for image loading, caching, and view controller utilities
+
+### Assets & Placeholders
+`Assets.xcassets/placeholder.imageset` includes placeholder images used while photos load.
+
+### Troubleshooting
+- If images do not load, verify your `API_BASE_URL` and any network entitlements if testing on device
+- Clean build folder (Shift+Command+K) and re-run if Xcode reports stale NIBs or assets
+- Ensure the correct scheme is selected (`PhotoGrid` vs `PhotoGrid(Dev)`) when testing environment-specific behavior
+
+### License
+This project is provided as-is for educational purposes. Update with your preferred license if distributing.
 
 
-## 🌐 Socials:
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/soemin.thein.166196) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/soemin_thein) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/soemin-thein) [![X](https://img.shields.io/badge/X-black.svg?logo=X&logoColor=white)](https://x.com/soeminthein_) 
-
-# 💻 Tech Stack:
-![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![Realm](https://img.shields.io/badge/Realm-39477F?style=for-the-badge&logo=realm&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Confluence](https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&logo=confluence&logoColor=white) ![Jira](https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white) ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white) ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white) ![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=soemintheinsmt6&theme=chartreuse-dark&hide_border=true&include_all_commits=true&count_private=true)<br/>
-![](https://github-readme-streak-stats.herokuapp.com/?user=soemintheinsmt6&theme=chartreuse-dark&hide_border=true)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=soemintheinsmt6&theme=chartreuse-dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
-
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->

@@ -11,6 +11,8 @@
 		9219F7CC2C778DA2005FBD75 /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219F7C92C778DA2005FBD75 /* PhotoListViewController.swift */; };
 		9219F7D02C7791CE005FBD75 /* PhotoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9219F7CF2C7791CE005FBD75 /* PhotoDetailsViewController.xib */; };
 		9219F7D12C7791CE005FBD75 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219F7CE2C7791CE005FBD75 /* PhotoDetailsViewController.swift */; };
+		9220D6792EA641020059B276 /* UIImage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220D6782EA641020059B276 /* UIImage-Extension.swift */; };
+		9220D67B2EA6416B0059B276 /* UIImageView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220D67A2EA6416B0059B276 /* UIImageView-Extension.swift */; };
 		923301412E1903F5007E545E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 923301402E1903F5007E545E /* Alamofire */; };
 		923301482E190432007E545E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 923301472E190432007E545E /* SDWebImage */; };
 		9233014B2E19046B007E545E /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = 9233014A2E19046B007E545E /* SkeletonView */; };
@@ -28,7 +30,7 @@
 		9246B35D2C75056C009571A3 /* IndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9246B35B2C75056B009571A3 /* IndicatorCell.swift */; };
 		9246B35E2C75056C009571A3 /* IndicatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9246B35C2C75056B009571A3 /* IndicatorCell.xib */; };
 		927BA35D2C75A4EC00B90919 /* PushRelevantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927BA35C2C75A4EC00B90919 /* PushRelevantViewController.swift */; };
-		92DCEED62C74F4EB00E209BA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCEED52C74F4EB00E209BA /* Extension.swift */; };
+		92DCEED62C74F4EB00E209BA /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DCEED52C74F4EB00E209BA /* UIViewController-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		9219F7CA2C778DA2005FBD75 /* PhotoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListViewController.xib; sourceTree = "<group>"; };
 		9219F7CE2C7791CE005FBD75 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		9219F7CF2C7791CE005FBD75 /* PhotoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailsViewController.xib; sourceTree = "<group>"; };
+		9220D6782EA641020059B276 /* UIImage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage-Extension.swift"; sourceTree = "<group>"; };
+		9220D67A2EA6416B0059B276 /* UIImageView-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView-Extension.swift"; sourceTree = "<group>"; };
 		923769DD2C8B185400F6F89F /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		924315C22C74CD28009D1583 /* PhotoGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		924315C52C74CD28009D1583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +90,7 @@
 		927354D22E18E954005DB452 /* PhotoGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		927354E12E18E97E005DB452 /* PhotoGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		927BA35C2C75A4EC00B90919 /* PushRelevantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushRelevantViewController.swift; sourceTree = "<group>"; };
-		92DCEED52C74F4EB00E209BA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		92DCEED52C74F4EB00E209BA /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -138,6 +142,16 @@
 				9219F7CF2C7791CE005FBD75 /* PhotoDetailsViewController.xib */,
 			);
 			path = PhotoDetails;
+			sourceTree = "<group>";
+		};
+		9220D6772EA640CD0059B276 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92DCEED52C74F4EB00E209BA /* UIViewController-Extension.swift */,
+				9220D6782EA641020059B276 /* UIImage-Extension.swift */,
+				9220D67A2EA6416B0059B276 /* UIImageView-Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9233013F2E1903F5007E545E /* Frameworks */ = {
@@ -252,7 +266,7 @@
 		92DCEED72C74F4FA00E209BA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				92DCEED52C74F4EB00E209BA /* Extension.swift */,
+				9220D6772EA640CD0059B276 /* Extensions */,
 				927BA35C2C75A4EC00B90919 /* PushRelevantViewController.swift */,
 			);
 			path = Utils;
@@ -429,8 +443,10 @@
 				924315E62C74E695009D1583 /* PhotoListViewModel.swift in Sources */,
 				923769DE2C8B185400F6F89F /* PhotoService.swift in Sources */,
 				9219F7CC2C778DA2005FBD75 /* PhotoListViewController.swift in Sources */,
+				9220D67B2EA6416B0059B276 /* UIImageView-Extension.swift in Sources */,
 				924315C82C74CD28009D1583 /* SceneDelegate.swift in Sources */,
-				92DCEED62C74F4EB00E209BA /* Extension.swift in Sources */,
+				9220D6792EA641020059B276 /* UIImage-Extension.swift in Sources */,
+				92DCEED62C74F4EB00E209BA /* UIViewController-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +629,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoGrid/Info.plist;
@@ -643,6 +660,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoGrid/Info.plist;
@@ -738,6 +756,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoGrid/Info.plist;
@@ -826,6 +845,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoGrid/Info.plist;
@@ -855,6 +875,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
@@ -873,6 +894,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
@@ -891,6 +913,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
@@ -909,6 +932,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
@@ -926,6 +950,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
@@ -943,6 +968,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
@@ -960,6 +986,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
@@ -977,6 +1004,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GECBT57HV;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
 				MARKETING_VERSION = 1.0;
