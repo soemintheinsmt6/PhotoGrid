@@ -106,6 +106,20 @@ final class PhotoModelTests: XCTestCase {
         XCTAssertEqual(photo.resizedImageURL, expectedResizedURL)
     }
     
+    func testDecodingFailsWhenDownloadURLMissing() throws {
+        let jsonString = """
+        {
+            "id": "123",
+            "author": "Missing Download URL",
+            "url": "https://example.com/photo.jpg"
+        }
+        """
+        
+        let jsonData = jsonString.data(using: .utf8)!
+        
+        XCTAssertThrowsError(try JSONDecoder().decode(PhotoModel.self, from: jsonData))
+    }
+    
     func testPhotoModelArrayCoding() throws {
         let photos = [
             PhotoModel(id: "1", author: "Author1", url: "url1", downloadURL: "download1"),

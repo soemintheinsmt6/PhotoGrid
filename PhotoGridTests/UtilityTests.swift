@@ -114,4 +114,77 @@ final class UtilityTests: XCTestCase {
         
         XCTAssertEqual(photoDetailsVC.downloadURL, testURL)
     }
-} 
+    
+    func testScreenWidthAndHeightFallbackValuesWithoutWindow() throws {
+        let viewController = UIViewController()
+        _ = viewController.view
+        
+        XCTAssertEqual(viewController.screenWidth, 1)
+        XCTAssertEqual(viewController.screenHeight, 1)
+    }
+    
+    func testPlaceholderImageIsLoaded() throws {
+        let placeholder = UIImage.placeholderImage
+        XCTAssertNotNil(placeholder)
+    }
+    
+    func testEnableZoomAddsPinchGestureRecognizer() throws {
+        let imageView = UIImageView()
+        
+        XCTAssertEqual(imageView.gestureRecognizers?.count ?? 0, 0)
+        XCTAssertFalse(imageView.isUserInteractionEnabled)
+        
+        imageView.enableZoom()
+        
+        XCTAssertTrue(imageView.isUserInteractionEnabled)
+        
+        let pinchGestures = imageView.gestureRecognizers?.compactMap { $0 as? UIPinchGestureRecognizer } ?? []
+        XCTAssertEqual(pinchGestures.count, 1)
+    }
+}
+
+final class PhotoListViewControllerIntegrationTests: XCTestCase {
+    
+    private func makeSUT(withPhotos photos: [PhotoModel]) -> (viewController: PhotoListViewController, navigationController: UINavigationController, mockService: MockPhotoService) {
+        let mockService = MockPhotoService()
+        mockService.photos = photos
+        mockService.delay = 0
+        
+        let viewModel = PhotoListViewModel(photoService: mockService)
+        let bundle = Bundle(for: PhotoListViewController.self)
+        let viewController = PhotoListViewController(nibName: "PhotoListViewController", bundle: bundle)
+        viewController.viewModel = viewModel
+        
+        let navigationController = UINavigationController(rootViewController: viewController)
+        
+        _ = viewController.view
+        
+        return (viewController, navigationController, mockService)
+    }
+    
+    func testCollectionViewShowsPhotosAfterFetch() throws {
+        let photos = TestDataFactory.createMockPhotos(count: 5)
+        let (viewController, _, _) = makeSUT(withPhotos: photos)
+        
+        waitForAsyncOperation(timeout: 1.0)
+        
+        XCTAssertEqual(viewController.viewModel.photos.count, photos.count)
+        XCTAssertEqual(viewController.photoCollectionView.numberOfItems(inSection: 0), photos.count + 3)
+    }
+    
+    func testSelectingPhotoPushesDetailsViewController() throws {
+        let photos = TestDataFactory.createMockPhotos(count: 1)
+        let (viewController, navigationController, _) = makeSUT(withPhotos: photos)
+        
+        waitForAsyncOperation(timeout: 1.0)
+        
+        XCTAssertGreaterThan(viewController.photoCollectionView.numberOfItems(inSection: 0), 0)
+        
+        let indexPath = IndexPath(item: 0, section: 0)
+        viewController.collectionView(viewController.photoCollectionView, didSelectItemAt: indexPath)
+        
+        let pushedViewController = navigationController.viewControllers.last as? PhotoDetailsViewController
+        XCTAssertNotNil(pushedViewController)
+        XCTAssertEqual(pushedViewController?.downloadURL, photos[0].downloadURL)
+    }
+}

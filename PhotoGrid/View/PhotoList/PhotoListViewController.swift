@@ -18,8 +18,10 @@ class PhotoListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let photoService = PhotoService()
-        viewModel = PhotoListViewModel(photoService: photoService)
+        if viewModel == nil {
+            let photoService = PhotoService()
+            viewModel = PhotoListViewModel(photoService: photoService)
+        }
         
         setupView()
         bindViewModel()

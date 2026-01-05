@@ -67,6 +67,37 @@ final class PhotoListViewModelTests: XCTestCase {
         }
     }
     
+    func testFetchPhotosDoesNotIncrementPageOnFailure() throws {
+        mockPhotoService.shouldReturnError = true
+        
+        let initialPage = viewModel.currentPage
+        viewModel.fetchPhotos()
+        
+        let expectation = self.expectation(description: "Wait for failure page check")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 1.0) { _ in
+            XCTAssertEqual(self.viewModel.currentPage, initialPage)
+        }
+    }
+    
+    func testOnUpdateNotCalledOnFailure() throws {
+        mockPhotoService.shouldReturnError = true
+        
+        let expectation = self.expectation(description: "onUpdate should not be called")
+        expectation.isInverted = true
+        
+        viewModel.onUpdate = {
+            expectation.fulfill()
+        }
+        
+        viewModel.fetchPhotos()
+        
+        waitForExpectations(timeout: 1.0)
+    }
+    
     func testFetchPhotosIncrementsPage() throws {
         let mockPhotos = [PhotoModel(id: "1", author: "author1", url: "url1", downloadURL: "downloadUrl1")]
         mockPhotoService.photos = mockPhotos
